@@ -1,5 +1,5 @@
-import { getAnuncios } from "./anuncios-model";
-import { buildAnuncio, buildEmptyAnuncios } from "./anuncios-view";
+import { getAnuncios } from "./anuncios-model.js";
+import { buildAnuncio, buildEmptyAnuncios } from "./anuncios-view.js";
 
 export async function anunciosController(anunciosContainer){
     try {

@@ -11,6 +11,7 @@ export function buildAnuncio(anuncio){
     <p>${anuncio.descripcion}</p>
     <p> Precio: ${anuncio.precio}</p>
     <p>Tipo: ${anuncio.compraVenta? 'Compra':'Venta'}</p>
+    <a href="./anuncios-detail.html?id=${anuncio.id}" class="ver-detalle">Ver detalle</a>
     `;
 
     return newAnuncio
@@ -18,4 +19,5 @@ export function buildAnuncio(anuncio){
 }
 export function buildEmptyAnuncios() {
     return `<P>No hay anuncios disponibles</p>`
+    
 }

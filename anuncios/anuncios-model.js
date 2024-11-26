@@ -8,6 +8,7 @@ export async function getAnuncios(){
         const anuncios = await response.json();
         return anuncios
     } catch (error) {
+
         throw new Error(error.message)
         
     }
