@@ -1,0 +1,33 @@
+/* --- anuncio-detalle.css --- */
+
+.anuncio-detail {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .anuncio-detail img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .anuncio-detail h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+    
+    .anuncio-detail p {
+        margin: 5px 0;
+    }
+    
+    .anuncio-detail .botones {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }

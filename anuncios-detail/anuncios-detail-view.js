@@ -1,5 +1,5 @@
 // construir anuncios detallados
-export function buildAnuncioDetalle(anuncio) {
+export function buildAnuncioDetail(anuncio) {
     const detalleHTML = `
         <article class="anuncio-detalle">
             <img src="${anuncio.imagen || 'ruta/imagen-por-defecto.jpg'}" alt="Imagen de ${anuncio.nombre}">

@@ -1,5 +1,5 @@
 import { getAnuncioById } from "./anuncios-detail-model.js";
-import { buildAnuncioDetalle } from "./anuncios-detail-view.js";
+import { buildAnuncioDetail } from "./anuncios-detail-view.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     const container = document.querySelector("#anuncio-detail-container")
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     try {  
         const anuncio = await getAnuncioById(anuncioIn)
-        container.innerHTML = buildAnuncioDetalle(anuncio)
+        container.innerHTML = buildAnuncioDetail(anuncio)
     } catch (error) {
         container.innerHTML = `<p>Error al cargar el anuncio ${error.message}</p>`
     }

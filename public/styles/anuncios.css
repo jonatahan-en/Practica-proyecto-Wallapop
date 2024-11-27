@@ -1,0 +1,33 @@
+/* --- anuncios.css --- */
+
+.anuncio-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    }
+    
+    .anuncio-card img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .anuncio-card h3 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: var(--primary-color);
+    }
+    
+    .anuncio-card p {
+        margin: 5px 0;
+    }
+    
+    .anuncio-card a {
+        display: inline-block;
+        margin-top: 10px;
+        color: var(--primary-color);
+        font-weight: bold;
+    }

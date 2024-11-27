@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Anuncio</title>
+    <link rel="stylesheet" href="./public/styles/global.css">
+    <link rel="stylesheet" href="./public/styles/formularios.css">
+</head>
+<body>
+    <header>
+        <h1>Crear un Nuevo Anuncio</h1>
+    </header>
+    <main>
+        <form id="crear-anuncio-form">
+        <!-- Subir Imagen -->
+        <label for="foto">Subir Foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*"><br>
+
+        <!-- Nombre del Producto -->
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre del anuncio" required><br>
+
+        <!-- Descripción -->
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Describe el anuncio" required></textarea><br>
+
+        <!-- Precio -->
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" placeholder="Precio en euros" required><br>
+
+        <!-- Tipo: Compra o Venta -->
+        <label for="compraVenta">Tipo:</label>
+        <select id="compraVenta" name="compraVenta" required>
+            <option value="venta">Venta</option>
+            <option value="compra">Compra</option>
+        </select><br>
+
+        <!-- Botón de Enviar -->
+        <button type="submit">Crear Anuncio</button>
+        </form>
+    </main>
+    <footer>
+        <p>Wallapop - Desarrollo Frontend</p>
+    </footer>
+
+    <!-- Script principal -->
+    <script type="module" src="./crear-anuncios.js"></script>
+</body>
+</html>
