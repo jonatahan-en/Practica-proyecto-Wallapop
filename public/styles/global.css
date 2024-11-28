@@ -1,7 +1,5 @@
 
 /* --- global.css --- */
-
-/* Paleta de colores */
 :root {
     --primary-color: #4CAF50;
     --secondary-color: #f4f4f4;
@@ -48,4 +46,11 @@
         background-color: darkgreen;
     }
     
-  
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        height: 100vh; /* Hace que el cuerpo tome toda la altura de la ventana */
+        margin: 0; /* Elimina los márgenes predeterminados */
+    }

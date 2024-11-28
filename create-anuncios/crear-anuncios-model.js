@@ -6,8 +6,9 @@ export async function guardarAnuncios(formData){
 
     const response = await fetch("http://localhost:8000/api/anuncios", {
         method: "POST",
-        body: formData,
+        body:  JSON.stringify(formData),
         headers: {
+            "content-type": 'application/json',
             "Authorization": `Bearer ${token}`
             }
     });

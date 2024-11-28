@@ -1,10 +1,9 @@
 export async function getAnuncios(){
     try {
-        const response = await fetch("http://localhost:8000/api/anuncios?_expand=user")
+        const response = await fetch("http://localhost:8000/api/anuncios")
         if (!response.ok){
-            throw new Error('Error al cargar el anuncio')
+            throw new Error('recurso no existente')
         }
-        
         const anuncios = await response.json();
         return anuncios
     } catch (error) {

@@ -19,7 +19,7 @@ export function signupController(form){
         try {
             await registrarUsuario(userEmail, password); // Llama a la función del modelo para crear usuario
             alert('Usuario registrado con éxito');
-            window.location.href = '/'; // Redirige al login
+            window.location.href = '/login.js'; 
         } catch (error) {
             alert(`Error al registrar usuario: ${error.message}`);
         }
