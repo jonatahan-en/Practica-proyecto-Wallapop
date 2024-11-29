@@ -11,4 +11,4 @@ export async function getAnuncios(){
         throw new Error(error.message)
         
     }
-}
+} 

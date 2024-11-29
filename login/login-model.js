@@ -3,7 +3,7 @@ export async function loginUser(email, password) {
         method: 'POST',
         body: JSON.stringify({
             username: email,
-            password:password,
+            password,
         }),
         headers:{
             'Content-type': 'application/json',
@@ -12,7 +12,7 @@ export async function loginUser(email, password) {
     if (!response.ok){
         throw new Error('Error iniciando sesion')
     }
-    const data = await response.json();
-    localStorage.setItem("jwt", data.token);
-    
+    const {accessToken} = await response.json();
+
+    return accessToken
 }

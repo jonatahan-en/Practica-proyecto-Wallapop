@@ -12,21 +12,36 @@ export function loginController(form){
         const password = passwordElement.value
 
         //VALIDACIONES
+        const errors = []
         const emailRegExp = new RegExp(REGEXP.mail);
         if (!emailRegExp.test(email)) {
-        errors.push('formato de mail incorrecto')
+        errors.push('formato de email incorrecto')
+        }else{
+            handleLoginUser(email, password)
         }
         if (!email || !password) {
-            alert("Por favor, completa todos los campos");
-            return;
+            errors.push("Por favor, completa todos los campos");
+
+        }
+        if (!password || password.trim() === "") {
+            errors.push("La contraseña no puede estar vacía.");
+        }
+        if (password.length <= 4 || password.length >= 12) {
+            errors.push("La contraseña debe tener entre 4 y 12 caracteres.");
+        }
+
+        async function handleLoginUser(email, password) {
+            const token = await loginUser(email, password)
+
+            localStorage.setItem("jwt", token);
         }
 
         try {
         await loginUser(email, password)
-            alert('Inicio de secion exitosa')
-            window.location.href = '/index.html'
+            alert('Inicio de sesion exitosa')
+            window.location.href = '/'
         } catch (error) {
-            alert(error.message)
+            alert(`No se a podido iniciar sesión ${errors}`)
         
         }
     })

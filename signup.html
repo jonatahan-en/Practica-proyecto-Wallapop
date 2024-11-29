@@ -8,9 +8,15 @@
         <link rel="stylesheet" href="./public/styles/formularios.css">
     </head>
     <body>
+        <h1>Registrate!</h1>
         <form id="signup-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre" >
+
+        <br/>
+
         <label for="user-mail">mail</label>
-        <input type="mail" id="user-mail" name="user-mail" required />
+        <input type="mail" id="user-mail" name="user-mail" required  placeholder="ingresa tu email"/>
 
         <br />
 
@@ -18,6 +24,16 @@
         <input
             type="password"
             id="password"
+            name="password"
+            required
+            minlength="4"
+        />
+        <br />
+
+        <label for="password-confirm">password confirm</label>
+        <input
+            type="password"
+            id="password-confirm"
             name="password"
             required
             minlength="4"
