@@ -9,7 +9,8 @@ export function sessionController(sessionContainer){
 
     if (isUserLoggedIn()){
         sessionContainer.innerHTML = sessionAutorizada()
-        sessionContainer.addEventListener('click',()=> {
+        const closeSessionButton = sessionContainer.querySelector('button')
+        closeSessionButton.addEventListener('click',()=> {
         localStorage.removeItem('jwt')
         sessionController(sessionContainer)
         })

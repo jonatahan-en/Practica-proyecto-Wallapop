@@ -2,15 +2,15 @@
 export function buildAnuncio(anuncio){
     const newAnuncio = document.createElement('div')
 
-    const imagenHTML = anuncio.imagen
-        ? `<img src="${anuncio.imagen}" alt="Imagen de ${anuncio.nombre}" class="anuncio-imagen">`
+    const imagenHTML = anuncio.photo
+        ? `<img src="${anuncio.photo}" alt="Imagen de ${anuncio.name}" class="anuncio-imagen">`
         : "";
     newAnuncio.innerHTML = `
     ${imagenHTML}
-    <h3>${anuncio.nombre}</h3>
-    <p>${anuncio.descripcion}</p>
-    <p> Precio: ${anuncio.precio}</p>
-    <p>Tipo: ${anuncio.compraVenta? 'Compra':'Venta'}</p>
+    <h3>${anuncio.name}</h3>
+    <p>${anuncio.description}</p>
+    <p> Precio: ${anuncio.price}</p>
+    <p>Tipo: ${anuncio.trading? 'Compra':'Venta'}</p>
     <a href="./anuncios-detail.html?id=${anuncio.id}" class="ver-detalle">Ver detalle</a>
     `;
 

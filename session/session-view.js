@@ -1,6 +1,6 @@
 export function sessionAutorizada(){
     return ` 
-    <a href="/crear-anuncio-html">Crear anuncio</a>
+    <a href="/crear-anuncios.html">Crear anuncio</a>
     <button>Cerrar sesión</button>
     `
 }
