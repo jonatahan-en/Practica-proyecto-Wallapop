@@ -38,4 +38,4 @@ export async function anunciosController(anunciosContainer){
     } finally{
         spinner.classList.toggle('hidden')
     }   
-}
+}  

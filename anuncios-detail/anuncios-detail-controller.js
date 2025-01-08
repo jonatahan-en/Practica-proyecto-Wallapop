@@ -1,19 +1,35 @@
-import { getAnuncioById } from "./anuncios-detail-model.js";
-import { buildAnuncioDetail } from "./anuncios-detail-view.js";
+import { getCurrentUserInfo } from "../auth/auth-model.js";
+import { getAnuncioById, removeAnuncio } from "./anuncios-detail-model.js";
+import { buildAnuncioDetail, buildDeleteButton } from "./anuncios-detail-view.js";
 
-document.addEventListener("DOMContentLoaded", async () => {
-    const container = document.querySelector("#anuncio-detail-container")
-    // obtener el id
-    const params = new URLSearchParams(window.location.search);
-    const anuncioIn = params.get('id')
-
-    if(!anuncioIn){
-        container.innerHtml = '<P>Error: no se especifico un Id valido </P>'
-    }
+export  async function anuncioDetailController(anuncioDetailContainer, anuncioId){
     try {  
-        const anuncio = await getAnuncioById(anuncioIn)
-        container.innerHTML = buildAnuncioDetail(anuncio)
+        const anuncio = await getAnuncioById(anuncioId);
+
+        const user = await getCurrentUserInfo();
+        
+        anuncioDetailContainer.innerHTML = buildAnuncioDetail(anuncio)
+        try {
+            if (user.id === anuncio.user.id) {
+                const removeButtonElement = buildDeleteButton()
+                anuncioDetailContainer.appendChild(removeButtonElement)
+                removeButtonElement.addEventListener('click', async () => {
+                    const shouldRemoveAnuncio = confirm('¿Estás seguro que quieres eliminar este anuncio?')
+                    if(shouldRemoveAnuncio) {
+                        await removeAnuncio(anuncio.id)
+                        alert('Anuncio eliminado')
+                    }
+                    
+                    window.location.href = "/"
+                })
+            }
+            
+        } catch (error) {
+            alert(`Error al eliminar el anuncio ${error.message}`)
+        }
     } catch (error) {
-        container.innerHTML = `<p>Error al cargar el anuncio ${error.message}</p>`
+        alert (`Error al cargar el anuncio ${error.message}`)
+        window.location.href = "/"
     }
-})
+}
+

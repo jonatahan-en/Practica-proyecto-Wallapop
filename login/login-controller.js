@@ -14,11 +14,6 @@ export function loginController(form){
         //VALIDACIONES
         const errors = []
         const emailRegExp = new RegExp(REGEXP.mail);
-        if (!emailRegExp.test(email)) {
-        errors.push('formato de email incorrecto')
-        }else{
-            handleLoginUser(email, password)
-        }
         if (!email || !password) {
             errors.push("Por favor, completa todos los campos");
 
@@ -29,6 +24,11 @@ export function loginController(form){
         if (password.length <= 4 || password.length >= 12) {
             errors.push("La contraseña debe tener entre 4 y 12 caracteres.");
         }
+        if (!emailRegExp.test(email)) {
+        errors.push('formato de email incorrecto')
+        }else{
+            handleLoginUser(email, password)
+        } 
 
         async function handleLoginUser(email, password) {
             const token = await loginUser(email, password)

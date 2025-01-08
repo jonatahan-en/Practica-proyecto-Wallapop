@@ -1,13 +1,10 @@
+import { isUserLoggedIn } from "../utils/auth.js";
 import { sesionNoAutorizada, sessionAutorizada } from "./session-view.js";
 
 export function sessionController(sessionContainer){
-    const isUserLoggedIn = () => {
-        const token = localStorage.getItem('jwt')
+    
 
-        return !!token;
-    }
-
-    if (isUserLoggedIn()){
+    if (isUserLoggedIn()) {
         sessionContainer.innerHTML = sessionAutorizada()
         const closeSessionButton = sessionContainer.querySelector('button')
         closeSessionButton.addEventListener('click',()=> {

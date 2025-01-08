@@ -4,6 +4,7 @@ import { registrarUsuario } from "./signup-model.js"
 export function signupController(form){
     form.addEventListener('submit', async(event) => {
         event.preventDefault()
+        
         const nameElement = form.querySelector('#name')
         const userNameElement = form.querySelector('#user-mail')
         const PasswordElement = form.querySelector('#password')
