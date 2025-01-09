@@ -1,4 +1,5 @@
 // construimos el anuncio
+// construimos el anuncio
 export function buildAnuncio(anuncio){
     const newAnuncio = document.createElement('a')
     newAnuncio.setAttribute('href',`/anuncios-detail.html?id=${anuncio.id}`)
@@ -8,7 +9,7 @@ export function buildAnuncio(anuncio){
         : "";
     newAnuncio.innerHTML = `
     <div>
-    <img>${imagenHTML}</img>
+    ${imagenHTML}
     <h3>${anuncio.name}</h3>
     <p>${anuncio.description}</p>
     <p> Precio: ${anuncio.price}</p>

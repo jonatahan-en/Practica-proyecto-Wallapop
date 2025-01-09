@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "name": "juan",
+      "username": "juan@juan.com",
+      "password": "$2b$10$1.MfWyb/TFTO2oZTFSOYoejM3PUgriDL8syHQ09Lgt5xKiJcqdMTq",
+      "id": 1
+    },
+    {
+      "name": "pedro",
+      "username": "pedro@pedro.com",
+      "password": "$2b$10$1.MfWyb/TFTO2oZTFSOYoejM3PUgriDL8syHQ09Lgt5xKiJcqdMTq",
+      "id": 2
+    },
+    {
+      "name": "pablo",
+      "username": "pablo@pablo.com",
+      "password": "$2b$10$1.MfWyb/TFTO2oZTFSOYoejM3PUgriDL8syHQ09Lgt5xKiJcqdMTq",
+      "id": 3
+    }
+  ],
+  "anuncios": [
+    {
+      "photo": "C:\\fakepath\\Cargador.jpg",
+      "name": "cargador",
+      "description": "cargador de teléfono móvil",
+      "price": "20",
+      "trading": "venta",
+      "userId": 1,
+      "updatedAt": "2025-01-09T14:11:14.594Z",
+      "id": 1
+    },
+    {
+      "photo": "C:\\fakepath\\Imagen Guante piel.jpg",
+      "name": "guantes",
+      "description": "guantes de tela para obra",
+      "price": "15",
+      "trading": "venta",
+      "userId": 1,
+      "updatedAt": "2025-01-09T14:12:10.234Z",
+      "id": 2
+    },
+    {
+      "photo": "C:\\fakepath\\Imagen iphone 12.jpg",
+      "name": "iphone",
+      "description": "iphone 12 blanco",
+      "price": "200",
+      "trading": "venta",
+      "userId": 3,
+      "updatedAt": "2025-01-09T20:17:59.679Z",
+      "id": 3
+    },
+    {
+      "photo": "C:\\fakepath\\Imagen Bolso.jpg",
+      "name": "Bolso",
+      "description": "Bolso de piel para señora",
+      "price": "60",
+      "trading": "venta",
+      "userId": 3,
+      "updatedAt": "2025-01-09T20:49:38.550Z",
+      "id": 4
+    }
+  ]
+}

@@ -12,10 +12,12 @@
         <h1>Crear Un Nuevo Anuncio</h1>
     </header>
     <main>
-        <form id="crear-anuncio-form">
+        <form id="crear-anuncio-form" enctype="multipart/form-data">
         <!-- Subir Imagen -->
-        <label for="foto">Subir Foto:</label>
-        <input type="file" id="foto" name="foto" accept="image/*"><br>
+        <input type="file" id="foto" name="foto" accept="image/*" required />
+//     <img id="image-preview" style="display: none; max-width: 200px; margin-top: 10px;" alt="Vista previa de la imagen" />
+
+        <br>
 
         <!-- Nombre del Producto -->
         <label for="nombre">Nombre del Producto:</label>
@@ -47,6 +49,7 @@
     </footer>
 
     <!-- Script principal -->
+    
     <script type="module" src="./crear-anuncios.js"></script>
 </body>
 </html>

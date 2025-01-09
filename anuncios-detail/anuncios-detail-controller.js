@@ -32,4 +32,3 @@ export  async function anuncioDetailController(anuncioDetailContainer, anuncioId
         window.location.href = "/"
     }
 }
-

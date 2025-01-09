@@ -6,7 +6,7 @@ export async  function guardarAnuncios(photo, name, description, price, trading)
 
     const response = await fetch("http://localhost:8000/api/anuncios", {
         method: "POST",
-        body: JSON.stringify({
+        body: JSON.stringify ({
             photo,
             name,
             description,

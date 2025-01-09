@@ -1,4 +1,5 @@
 // construir anuncios detallados
+// construir anuncios detallados
 export function buildAnuncioDetail(anuncio) {
     const imagenHTML = anuncio.photo
     ? `<img src="${anuncio.photo}" alt="Imagen de ${anuncio.name}" >`
@@ -8,7 +9,7 @@ return `
         <a href="./index.html">Inicio</a>
     </nav>
 <div>
-<img>${imagenHTML}</img>
+${imagenHTML}
 <h3>${anuncio.name}</h3>
 <p>${anuncio.description}</p>
 <p> Precio: ${anuncio.price}</p>
