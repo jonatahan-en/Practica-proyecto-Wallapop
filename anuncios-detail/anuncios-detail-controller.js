@@ -4,9 +4,8 @@ import { buildAnuncioDetail, buildDeleteButton } from "./anuncios-detail-view.js
 
 export  async function anuncioDetailController(anuncioDetailContainer, anuncioId){
     try {  
-        const anuncio = await getAnuncioById(anuncioId);
-
         const user = await getCurrentUserInfo();
+        const anuncio = await getAnuncioById(anuncioId);
         
         anuncioDetailContainer.innerHTML = buildAnuncioDetail(anuncio)
         try {

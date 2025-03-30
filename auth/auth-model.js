@@ -1,9 +1,9 @@
-export  async function getCurrentUserInfo  ()  {
-    const token = localStorage.getItem('jwt')
+export  async function getCurrentUserInfo() {
+    const token = localStorage.getItem('jwt');
     try {
-        const response = await fetch(`http://localhost:8000/auth/me`,{
+        const response = await fetch(`http://localhost:8000/auth/me`, {
             headers: {
-                'Content-Type': 'application/json',
+                'Content-type': 'application/json',
                 'Authorization': `Bearer ${token}`
             }
         })

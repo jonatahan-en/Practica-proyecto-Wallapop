@@ -2,12 +2,12 @@ import { getAnuncios } from "./anuncios-model.js";
 import { buildAnuncio, buildEmptyAnuncios } from "./anuncios-view.js";
 
 function drawAnuncios(anuncios, anunciosContainer){
-    if (anuncios.length === 0){
+    if (!anuncios.length){
         anunciosContainer.innerHTML = buildEmptyAnuncios()
     }else{
         anuncios.forEach(anuncio => {
-            const anunciosElement = buildAnuncio(anuncio)
-            anunciosContainer.appendChild(anunciosElement)
+            const newAnuncio = buildAnuncio(anuncio)
+            anunciosContainer.appendChild(newAnuncio)
         });
     }
 }

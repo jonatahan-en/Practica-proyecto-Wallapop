@@ -1,15 +1,10 @@
 // construimos el anuncio
-// construimos el anuncio
 export function buildAnuncio(anuncio){
     const newAnuncio = document.createElement('a')
     newAnuncio.setAttribute('href',`/anuncios-detail.html?id=${anuncio.id}`)
-
-    const imagenHTML = anuncio.photo
-        ? `<img src="${anuncio.photo}" alt="Imagen de ${anuncio.name}" >`
-        : "";
     newAnuncio.innerHTML = `
     <div>
-    ${imagenHTML}
+    <img src="${anuncio.photo}" alt="${anuncio.photo}">
     <h3>${anuncio.name}</h3>
     <p>${anuncio.description}</p>
     <p> Precio: ${anuncio.price}</p>
